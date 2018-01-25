@@ -1,0 +1,256 @@
+:root {
+	--Primary: 233, 43, 0;
+	--Accent: 0, 190, 233;
+	--DarkAccent: 0, 150, 193;
+	--Window: 228, 230, 232;
+	--Code: 0, 0, 0;
+	--TextColor: 32, 32, 32;
+	--TextColorCode: 255, 255, 255;
+}
+
+
+/* #region Standard styles*/
+
+body {
+	color: rgb(var(--TextColor));
+	background-color: white;
+	font-family: 'Segoe UI', sans-serif;
+	font-size: 16px;
+	margin: 0;
+	min-height: 100vh;
+}
+
+h1,
+h2 {
+	font-family: 'bahnschrift Light', sans-serif;
+}
+
+h1 {
+	font-size: 48px;
+}
+
+h2 {
+	font-size: 32px;
+}
+
+button {
+	outline: none;
+	border: none;
+	padding: 10px 50px;
+	color: white;
+	transition: filter 0.3s, box-shadow 0.3s;
+	border-radius: 15px;
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+	background-color: rgb(var(--DarkAccent));
+}
+
+button+button {
+	background-color: rgb(var(--Accent));
+}
+
+button:hover {
+	filter: grayscale(0.5);
+	box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+img,
+button {
+	user-select: none;
+	-webkit-user-drag: none;
+}
+
+
+/* #endregion */
+
+
+/* #region Icons*/
+
+.icon-download {
+	background-image: url(Images/download.png);
+	padding-left: 65px;
+	background-position: .75em center;
+	background-size: 1.5em;
+	background-repeat: no-repeat;
+}
+
+.icon-arrow-right {
+	background-image: url(Images/arrow-right.png);
+	padding-left: 65px;
+	background-position: .75em center;
+	background-size: 1.5em;
+	background-repeat: no-repeat;
+}
+
+.icon-mail {
+	background-image: url(Images/mail.png);
+	padding-left: 65px;
+	background-position: .75em center;
+	background-size: 1.5em;
+	background-repeat: no-repeat;
+}
+
+
+/* #endregion */
+
+
+/* #region navbar*/
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(223, 33, 0);
+	box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+	text-decoration: none;
+	color: rgb(var(--Window));
+	margin: 5px;
+	text-shadow: 0px 1px 15px rgba(0, 0, 0, 0.2);
+	transition: margin-bottom 0.1s, text-shadow 0.5s;
+}
+
+nav a:hover {
+	text-shadow: 0px 5px 11px rgba(0, 0, 0, 0.8);
+}
+
+nav #menu {
+	visibility: hidden;
+	height: 2.5em;
+	float: left;
+}
+
+.contact {
+	text-decoration: none;
+	color: rgb(var(--Accent));
+}
+
+
+/* #endregion */
+
+
+/* #region headers*/
+
+.header {
+	display: flex;
+	background-color: rgb(var(--Primary));
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 50vh;
+	text-align: center;
+	color: white;
+	margin: 0;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 5px;
+	box-shadow: inset 0px -2px 16px 0px rgba(0, 0, 0, 0.5);
+}
+
+.header * {
+	margin: -5px;
+}
+
+
+/* #endregion */
+
+
+/* #region Articles*/
+
+.articles {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+article {
+	flex: 1 40vw;
+	background-color: rgb(var(--Window));
+	max-width: 45vw;
+	margin: 15px 10px;
+	padding: 10px;
+	border-radius: 10px;
+	text-align: center;
+	box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+article h1 {
+	margin: 0;
+	color: rgb(var(--Accent));
+}
+
+article.profile img {
+	border-radius: 100%;
+	border: 1px solid rgba(var(--Accent), 0.4);
+}
+
+article.image img {
+	position: relative;
+	left: -10px;
+	width: calc(100% + 20px);
+	right: -10px;
+	top: -10px;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+}
+
+
+/* #endregion */
+
+
+/* #region footer*/
+
+footer {
+	position: relative;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: black;
+	color: rgb(var(--Accent));
+	height: 5vh;
+	text-align: center;
+}
+
+
+/* #endregion */
+
+
+/* #region Mobile*/
+
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+	nav {
+		height: 32px;
+		align-items: center;
+		justify-content: flex-start;
+		box-shadow: initial;
+		background-color: rgb(var(--Primary));
+	}
+	nav a {
+		display: none;
+	}
+	#menu {
+		visibility: visible !important;
+	}
+	body {
+		padding-top: 30px;
+	}
+	.header {
+		height: auto;
+		box-shadow: initial;
+	}
+	article {
+		flex: 1 100vw;
+		max-width: 100%;
+	}
+}
+
+
+/* #endregion */
