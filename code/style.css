@@ -37,6 +37,7 @@ button {
 	outline: none;
 	border: none;
 	padding: 10px 50px;
+	margin: 5px;
 	color: white;
 	transition: filter 0.3s, box-shadow 0.3s;
 	border-radius: 15px;
@@ -109,6 +110,7 @@ nav {
 }
 
 nav a {
+	overflow: visible;
 	text-decoration: none;
 	color: rgb(var(--Window));
 	margin: 5px;
@@ -117,12 +119,12 @@ nav a {
 }
 
 nav a:hover {
-	text-shadow: 0px 5px 11px rgba(0, 0, 0, 0.8);
+	color: white;
 }
 
 nav #menu {
 	visibility: hidden;
-	height: 2.5em;
+	height: 5vmax;
 	float: left;
 }
 
@@ -130,8 +132,31 @@ nav #menu {
 	text-decoration: none;
 	color: rgb(var(--Accent));
 }
-
-
+/* #region submenu's*/
+a .submenu {
+	transform-origin: top;
+	transform: scaleY(0);
+	overflow: hidden;
+	display: block;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background: linear-gradient(to top, rgb(199, 30, 0), rgb(223, 33, 0));
+	transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), border 1s cubic-bezier(0.4, 0, 0.2, 1);
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+a:hover .submenu {
+	transform: scaleY(1);
+}
+.submenu li {
+padding: 5px 10px;
+}
+.submenu li:hover {
+background-color: rgba(255,255,255,0.2);
+}
+/* #endregion */
 /* #endregion */
 
 
@@ -227,7 +252,7 @@ footer {
 
 @media screen and (max-device-width: 480px) and (orientation: portrait) {
 	nav {
-		height: 32px;
+		height: 5vmax;
 		align-items: center;
 		justify-content: flex-start;
 		box-shadow: initial;
@@ -238,9 +263,11 @@ footer {
 	}
 	#menu {
 		visibility: visible !important;
+		height: 5vmax;
+
 	}
 	body {
-		padding-top: 30px;
+		padding-top: 5vmax;
 	}
 	.header {
 		height: auto;

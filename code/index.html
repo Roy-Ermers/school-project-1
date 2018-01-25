@@ -11,13 +11,28 @@ Bestandsnaam:   index.html
 	<meta charset="utf-8" />
 	<title>Project 1</title>
 	<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="javascript/functions.js" defer type="text/javascript"></script>
 </head>
 
 <body>
 	<nav>
 		<img src="Images/menu.png" alt="menu" id="menu">
 		<a href="">Hobby's</a>
-		<a href="">Producten</a>
+		<a href="">Producten
+			<ul class="submenu">
+				<li>Product 1</li>
+				<li>Product 2</li>
+				<li>Product 3</li>
+				<li>Product 4</li>
+				<li>Product 5</li>
+				<li>Product 6</li>
+				<li>Product 7</li>
+				<li>Product 8</li>
+				<li>Product 9</li>
+				<li>Product 10</li>
+			</ul>
+		</a>
 		<a href="">home</a>
 		<a href="">Opleidingen</a>
 		<a href="">Werkervaring</a>
@@ -36,12 +51,14 @@ Bestandsnaam:   index.html
 				ribs. Cillum magna pork belly leberkas ham andouille kielbasa non beef ribs enim. Beef pig swine prosciutto. Voluptate
 				velit sed rump. Flank duis rump et est capicola spare ribs frankfurter biltong nisi turkey reprehenderit consectetur
 				pork eu.</p>
-			<button class="icon-download">Download CV</button>
+			<button class="icon-download" onclick="downloadFile('Files/Curriculum vitae.docx');">Download CV</button>
+			<button>zie mijn punten</button>
+			<button>nee</button>
 		</article>
 	</section>
 </body>
 <footer>
-	<p>Made by Roy Ermers</p>
+	<p>Made by Roy Ermers&COPY;</p>
 </footer>
 
 </html>
