@@ -1,0 +1,88 @@
+<!--
+Opdracht:       Project 1
+Auteur:         Roy Ermers
+Aanmaakdatum:   24-1-2018 8:45
+Bestandsnaam:   index.html
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Project 1</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="javascript/functions.js" defer type="text/javascript"></script>
+</head>
+
+<body>
+	<nav>
+		<img src="Images/menu.png" alt="menu" id="menu" onclick="showMenu()">
+		<div>
+			<a href="index.html">Home</a>
+			<a href="ervaring.html">Werkervaring</a>
+			<a href="opleiding.html">Opleidingen</a>
+			<a href="hobby.html">Hobby's</a>
+			<a onclick="toggleSubMenu(this)">Producten
+				<ul class="submenu">
+					<li onclick="openFile('product.html#product1')">Product 1</li>
+					<li onclick="openFile('product.html#product2')">Product 2</li>
+					<li onclick="openFile('product.html#product3')">Product 3</li>
+					<li onclick="openFile('product.html#product4')">Product 4</li>
+					<li onclick="openFile('product.html#product5')">Product 5</li>
+					<li onclick="openFile('product.html#product6')">Product 6</li>
+					<li onclick="openFile('product.html#product7')">Product 7</li>
+					<li onclick="openFile('product.html#product8')">Product 8</li>
+					<li onclick="openFile('product.html#product9')">Product 9</li>
+					<li onclick="openFile('product.html#product10')">Product 10</li>
+				</ul>
+			</a>
+			<a href="contact.html" class="contact">Neem contact op!</a>
+			<div class="backdrop" onclick="hideMenu()"></div>
+		</div>
+	</nav>
+	<div class="header">
+		<h1>Roy Ermers</h1>
+		<h2>Opleidingen</h2>
+	</div>
+	<section class="articles">
+		<article class="image">
+			<img src="Images/hethooghuisheesch.jpg" alt="Hooghuis Heesch">
+			<h1>Het Hooghuis Heesch</h1>
+			<p>
+				<strong>
+				Het Hooghuis Heesch was mijn middelbare school. hier heb ik de Techniek richting gevolgd met het vakkenpakket:
+				</strong>
+				<hr>
+				<ul>
+					<li>Nederlands</li>
+					<li>Engels</li>
+					<li>Wiskunde</li>
+					<li>Natuurkunde en Scheikunde</li>
+					<li>biologie</li>
+					<li>Economie</li>
+				</ul>
+				<hr>
+				Ik heb het erg naar mijn zin gehad op deze school, iedereen kende elkaar en de docenten waren geen docenten maar vrienden die iets probeerde uit te leggen. ik heb veel op deze school geleerd.
+			</p>
+			<a href="https://www.google.nl/maps/place/Het+Hooghuis+Heesch" target="_blank" class="button icon-location">Adres</a>
+			<a href="https://www.hethooghuis.nl/heesch" target="_blank" class="button icon-website">Website</a>
+		</article>
+		<article class="image">
+			<img src="Images/kw1c.jpg" alt="Hooghuis Heesch">
+			<h1>Applicatie Ontwikkelaar</h1>
+			<p>
+				<strong>
+				Het Koning Willem 1 College is de school waar ik nu op zit, dit is een MBO school.
+				</strong>
+			</p>
+			<a href="https://www.google.nl/maps/place/Het+Hooghuis+Heesch" target="_blank" class="button icon-location">Adres</a>
+			<a href="https://www.hethooghuis.nl/heesch" target="_blank" class="button icon-website">Website</a>
+		</article>
+	</section>
+</body>
+<footer>
+	<p>Made by Roy Ermers<sup>&COPY;</sup><br><sub>All Rights Reserved.</sub></p>
+</footer>
+
+</html>
