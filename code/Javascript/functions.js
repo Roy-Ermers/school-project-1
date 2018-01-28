@@ -1,4 +1,4 @@
-function downloadFile(location) {
+function openFile(location) {
 	window.location = location;
 }
 function showMenu() {
