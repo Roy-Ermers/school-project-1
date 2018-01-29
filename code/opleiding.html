@@ -8,22 +8,22 @@ Bestandsnaam:   index.html
 <html>
 
 <head>
-	<meta charset="utf-8" />
-	<title>Project 1</title>
-	<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="javascript/functions.js" defer type="text/javascript"></script>
+    <meta charset="utf-8" />
+    <title>Project 1</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="javascript/functions.js" defer type="text/javascript"></script>
 </head>
 
 <body>
-	<nav>
-		<img src="Images/menu.png" alt="menu" id="menu" onclick="showMenu()">
-		<div>
-			<a href="index.html">Home</a>
-			<a href="ervaring.html">Werkervaring</a>
-			<a href="opleiding.html">Opleidingen</a>
-			<a href="hobby.html">Hobby's</a>
-			<a onclick="toggleSubMenu(this)">Producten
+    <nav>
+        <img src="Images/menu.png" alt="menu" id="menu" onclick="showMenu()">
+        <div>
+            <a href="index.html">Home</a>
+            <a href="ervaring.html">Werkervaring</a>
+            <a href="opleiding.html">Opleidingen</a>
+            <a href="hobby.html">Hobby's</a>
+            <a onclick="toggleSubMenu(this)">Producten
 				<ul class="submenu">
 					<li onclick="openFile('product.html#product1')">Product 1</li>
 					<li onclick="openFile('product.html#product2')">Product 2</li>
@@ -37,52 +37,131 @@ Bestandsnaam:   index.html
 					<li onclick="openFile('product.html#product10')">Product 10</li>
 				</ul>
 			</a>
-			<a href="contact.html" class="contact">Neem contact op!</a>
-			<div class="backdrop" onclick="hideMenu()"></div>
-		</div>
-	</nav>
-	<div class="header">
-		<h1>Roy Ermers</h1>
-		<h2>Opleidingen</h2>
-	</div>
-	<section class="articles">
-		<article class="image">
-			<img src="Images/hethooghuisheesch.jpg" alt="Hooghuis Heesch">
-			<h1>Het Hooghuis Heesch</h1>
-			<p>
-				<strong>
+            <a href="contact.html" class="contact">Neem contact op!</a>
+            <div class="backdrop" onclick="hideMenu()"></div>
+        </div>
+    </nav>
+    <div class="header">
+        <h1>Roy Ermers</h1>
+        <h2>Opleidingen</h2>
+    </div>
+    <section class="articles">
+        <article class="logo">
+            <img src="Images/hethooghuisheesch.png" alt="Hooghuis Heesch">
+            <h1>Het Hooghuis Heesch</h1>
+            <p>
+                <strong>
 				Het Hooghuis Heesch was mijn middelbare school. hier heb ik de Techniek richting gevolgd met het vakkenpakket:
 				</strong>
-				<hr>
-				<ul>
-					<li>Nederlands</li>
-					<li>Engels</li>
-					<li>Wiskunde</li>
-					<li>Natuurkunde en Scheikunde</li>
-					<li>biologie</li>
-					<li>Economie</li>
-				</ul>
-				<hr>
-				Ik heb het erg naar mijn zin gehad op deze school, iedereen kende elkaar en de docenten waren geen docenten maar vrienden die iets probeerde uit te leggen. ik heb veel op deze school geleerd.
-			</p>
-			<a href="https://www.google.nl/maps/place/Het+Hooghuis+Heesch" target="_blank" class="button icon-location">Adres</a>
-			<a href="https://www.hethooghuis.nl/heesch" target="_blank" class="button icon-website">Website</a>
-		</article>
-		<article class="image">
-			<img src="Images/kw1c.jpg" alt="Hooghuis Heesch">
-			<h1>Applicatie Ontwikkelaar</h1>
-			<p>
-				<strong>
+                <hr>
+                <ul>
+                    <li>Nederlands</li>
+                    <li>Engels</li>
+                    <li>Wiskunde</li>
+                    <li>Natuurkunde en Scheikunde</li>
+                    <li>biologie</li>
+                    <li>Economie</li>
+                </ul>
+                <hr>
+                <h2>Ervaring</h2>
+                Ik heb het erg naar mijn zin gehad op deze school, iedereen kende elkaar en de docenten waren geen docenten maar vrienden die iets probeerde uit te leggen. ik heb veel op deze school geleerd.
+            </p>
+            <h2>Info</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2471.108894868229!2d5.525476115778191!3d51.73104357967248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6fccfc4440229%3A0x13af51b9d491a105!2sHet+Hooghuis+Heesch!5e0!3m2!1snl!2snl!4v1517221049926"
+                width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <a href="https://www.hethooghuis.nl/heesch" target="_blank" class="button icon-website full-width">Website</a>
+        </article>
+        <article class="logo">
+            <img src="Images/kw1c.png" alt="Hooghuis Heesch">
+            <h1>Applicatie Ontwikkelaar</h1>
+            <p>
+                <strong>
 				Het Koning Willem 1 College is de school waar ik nu op zit, dit is een MBO school.
 				</strong>
-			</p>
-			<a href="https://www.google.nl/maps/place/Het+Hooghuis+Heesch" target="_blank" class="button icon-location">Adres</a>
-			<a href="https://www.hethooghuis.nl/heesch" target="_blank" class="button icon-website">Website</a>
-		</article>
-	</section>
+                <hr>
+                <table id="grades">
+                    <tr>
+                        <th>Vak</th>
+                        <th>Cijfer</th>
+                    </tr>
+                    <tr>
+                        <td><button class="icon-arrow-right" onclick="showGrade(this, 'Nederlands');">Nederlands</button></td>
+                        <td class="grade">
+                            <h1>Wooops</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button class="icon-arrow-right" onclick="showGrade(this, 'Rekenen');">Rekenen</button></td>
+                        <td class="grade">
+                            <h1>Wooops</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button class="icon-arrow-right" onclick="showGrade(this, 'Engels');">Engels</button></td>
+                        <td class="grade">
+                            <h1>Wooops</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button class="icon-arrow-right" onclick="showGrade(this, 'Html');">Html/Css</button></td>
+                        <td class="grade">
+                            <h1>Wooops</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button class="icon-arrow-right" onclick="showGrade(this, 'Javascript');">Javascript</button></td>
+                        <td class="grade">
+                            <h1>Wooops</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button class="icon-arrow-right" onclick="showGrade(this, 'Usability');">Usability</button></td>
+                        <td class="grade">
+                            <h1>Wooops</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button class="icon-arrow-right" onclick="showGrade(this, 'Hardware');">Hardware AO</button></td>
+                        <td class="grade">
+                            <h1>Wooops</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button class="icon-arrow-right" onclick="showGrade(this, 'Computertekenen');">Computertekenen</button></td>
+                        <td class="grade">
+                            <h1>Wooops</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button class="icon-arrow-right" onclick="showGrade(this, 'Burgerschap');">Burgerschap</button></td>
+                        <td class="grade">
+                            <h1>Wooops</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button class="icon-arrow-right" onclick="showGrade(this, 'Vaardigheden');">Digitale Vaardigheden</button></td>
+                        <td class="grade">
+                            <h1>Wooops</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" rowspan="2"><em>Deze cijfers zijn op dit moment vast gelegd, resultaten kunnen in de toekomst veranderen.</em></td>
+                    </tr>
+                    <tr></tr>
+                </table>
+                <hr>
+                <h2>Ervaring</h2>
+                Ik vind het Koning Willem 1 een erg leuke school omdat ik nu eindelijk de hele dag kan doen wat ik wil, programmeren. Ik leer veel nieuwe dingen op deze school!
+            </p>
+            <h2>Info</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4947.006759193845!2d5.2824806!3d51.6872328!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6ee883afe78bb%3A0xc7562d84a5056fa0!2sKoning+Willem+I+College!5e0!3m2!1snl!2snl!4v1517221015385" width="400"
+                height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <a href="https://www.kw1c.nl/" target="_blank" class="button icon-website full-width">Website</a>
+        </article>
+    </section>
 </body>
 <footer>
-	<p>Made by Roy Ermers<sup>&COPY;</sup><br><sub>All Rights Reserved.</sub></p>
+    <p>Made by Roy Ermers<sup>&COPY;</sup><br><sub>All Rights Reserved.</sub></p>
 </footer>
 
-</html>
+</html
