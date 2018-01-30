@@ -18,35 +18,37 @@ Bestandsnaam:   index.html
 <body>
     <nav>
         <img src="Images/menu.png" alt="menu" id="menu" onclick="showMenu()">
+        <!-- deze div heb ik gemaakt om te gebruiken in de mobiele weergave -->
         <div>
             <a href="index.html">Home</a>
             <a href="ervaring.html">Werkervaring</a>
             <a href="opleiding.html">Opleidingen</a>
             <a href="hobby.html">Hobby's</a>
             <a onclick="toggleSubMenu(this)">Producten
+                <!-- dit is een submenu -->
 				<ul class="submenu">
-					<li onclick="openFile('product.html#product1')">Product 1</li>
-					<li onclick="openFile('product.html#product2')">Product 2</li>
-					<li onclick="openFile('product.html#product3')">Product 3</li>
-					<li onclick="openFile('product.html#product4')">Product 4</li>
-					<li onclick="openFile('product.html#product5')">Product 5</li>
-					<li onclick="openFile('product.html#product6')">Product 6</li>
-					<li onclick="openFile('product.html#product7')">Product 7</li>
-					<li onclick="openFile('product.html#product8')">Product 8</li>
-					<li onclick="openFile('product.html#product9')">Product 9</li>
-					<li onclick="openFile('product.html#product10')">Product 10</li>
+					<li onclick="openFile('product.html#product1')">Amazitile</li>
+					<li onclick="openFile('product.html#product2')">Annoying Piano</li>
+					<li onclick="openFile('product.html#product3')">The Geek Test</li>
+					<li onclick="openFile('product.html#product4')">Tim And Tom</li>
+					<li onclick="openFile('product.html#product5')">Wifiradar</li>
+					<li onclick="openFile('product.html#product6')">Numer</li>
+					<li onclick="openFile('product.html#product7')">Assasins Hiding</li>
+					<li onclick="openFile('product.html#product8')">Forty</li>
 				</ul>
 			</a>
             <a href="contact.html" class="contact">Neem contact op!</a>
+            <!-- dit gebruik ik in de mobiele weergave -->
             <div class="backdrop" onclick="hideMenu()"></div>
         </div>
     </nav>
+    <!-- dit is de header -->
     <div class="header">
         <h1>Roy Ermers</h1>
         <h2>portfolio</h2>
     </div>
     <section class="articles">
-        <article class="profile">
+        <article class="profile homepage">
             <img src="Images/profile.jpg" alt="Profielfoto">
             <h1>Over mij</h1>
             <p>Hallo ik ben Roy Ermers, ik woon in Geffen en zit in Den Bosch op school.<br>Ik zit nu op de Applicatie Ontwikkelaar opleiding op het Koning Willem I. In mijn vrije tijd ben ik erg veel bezig met programmeren.</p>
@@ -56,6 +58,7 @@ Bestandsnaam:   index.html
         </article>
     </section>
 </body>
+<!-- dit is de footer -->
 <footer>
     <p>Made by Roy Ermers<sup>&COPY;</sup><br><sub>All Rights Reserved.</sub></p>
 </footer>

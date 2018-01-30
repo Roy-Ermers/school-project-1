@@ -18,40 +18,94 @@ Bestandsnaam:   index.html
 <body>
     <nav>
         <img src="Images/menu.png" alt="menu" id="menu" onclick="showMenu()">
+        <!-- deze div heb ik gemaakt om te gebruiken in de mobiele weergave -->
         <div>
             <a href="index.html">Home</a>
             <a href="ervaring.html">Werkervaring</a>
             <a href="opleiding.html">Opleidingen</a>
             <a href="hobby.html">Hobby's</a>
             <a onclick="toggleSubMenu(this)">Producten
-				<ul class="submenu">
-					<li onclick="openFile('product.html#product1')">Product 1</li>
-					<li onclick="openFile('product.html#product2')">Product 2</li>
-					<li onclick="openFile('product.html#product3')">Product 3</li>
-					<li onclick="openFile('product.html#product4')">Product 4</li>
-					<li onclick="openFile('product.html#product5')">Product 5</li>
-					<li onclick="openFile('product.html#product6')">Product 6</li>
-					<li onclick="openFile('product.html#product7')">Product 7</li>
-					<li onclick="openFile('product.html#product8')">Product 8</li>
-					<li onclick="openFile('product.html#product9')">Product 9</li>
-					<li onclick="openFile('product.html#product10')">Product 10</li>
-				</ul>
-			</a>
+                        <!-- dit is een submenu -->
+                        <ul class="submenu">
+                            <li onclick="openFile('product.html#product1')">Amazitile</li>
+                            <li onclick="openFile('product.html#product2')">Annoying Piano</li>
+                            <li onclick="openFile('product.html#product3')">The Geek Test</li>
+                            <li onclick="openFile('product.html#product4')">Tim And Tom</li>
+                            <li onclick="openFile('product.html#product5')">Wifiradar</li>
+                            <li onclick="openFile('product.html#product6')">Numer</li>
+                            <li onclick="openFile('product.html#product7')">Assasins Hiding</li>
+                            <li onclick="openFile('product.html#product8')">Forty</li>
+                        </ul>
+                    </a>
             <a href="contact.html" class="contact">Neem contact op!</a>
+            <!-- dit gebruik ik in de mobiele weergave -->
             <div class="backdrop" onclick="hideMenu()"></div>
         </div>
     </nav>
+    <!-- dit is de header -->
     <div class="header">
         <h1>Roy Ermers</h1>
         <h2>Producten</h2>
     </div>
     <section class="articles">
         <article class="image" id="product1">
-            <img src="Images/screen.png" alt="Profielfoto">
+            <img src="Images/screen.png" alt="screenshot">
             <h1>Amazitile</h1>
             <p>Dit is een van mijn eerste games, ik heb deze game in 24 uur gemaakt en heb veel over verschillende concepten over Image Effects geleerd en hoe ik hier shaders voor moet schrijven.</p>
             <br>
             <button class="icon-website" onclick="openFile('http://numer.magix.net/Amazitile/');">Speel Game</button>
+        </article>
+        <article class="image" id="product2">
+            <img src="Images/annoying-piano.png" alt="screenshot">
+            <h1>Annoying Piano</h1>
+            <p>Dit is mijn eerste c# programma, dit was een uitstekende kennismaking met mijn favoriete taal, Csharp (C#)</p>
+            <br>
+            <!-- een knop om het programma te downloaden -->
+            <button class="icon-download" onclick="openFile('Files/Annoying-Piano.exe');">Download</button>
+        </article>
+        <article class="image" id="product3">
+            <img src="Images/geek-test.png" alt="screenshot">
+            <h1>The Geek Test</h1>
+            <p>Dit is een vrij recent programma, het is een quiz programma die ik heb geschreven met c#. hier heb ik kennis gemaakt met de Windows Forms framework.</p>
+            <br>
+            <!-- een knop om het programma te downloaden -->
+            <button class="icon-download" onclick="openFile('Files/the-geek-test.exe');">Download</button>
+        </article>
+        <article class="image" id="product4">
+            <img src="https://img.itch.zone/aW1hZ2UvMTM5MTM4LzY3OTk1My5qcGc=/347x500/yydWW6.jpg" alt="screenshot">
+            <h1>Tim And Tom</h1>
+            <p>Tim and Tom is mijn eerste volledige game, in deze game moet je samenwerken met een ander persoon om levels op te lossen. ik heb in deze game veel geleerd over Inputs en de filesystem. ik heb het geschreven in C#.</p>
+            <br>
+            <button class="icon-website" onclick="openFile('https://numer.itch.io/tim-and-tom');">Itch.io</button>
+        </article>
+        <article class="image" id="product5">
+            <img src="Images/wifiradar.png" alt="screenshot">
+            <h1>WifiRadar</h1>
+            <p>Wifiradar was mijn eerste kennismaking met netwerken, hier heb ik geleerd hoe ik informatie van de router kan op vragen en apparaten van het netwerk kan laten zien in een lijst.</p>
+            <br>
+            <!-- een knop om het programma te downloaden -->
+            <button class="icon-download" onclick="openFile('Files/wifiRadar.exe');">Download</button>
+        </article>
+        <article class="image" id="product6">
+            <img src="Images/numer.png" alt="screenshot">
+            <h1>Numer</h1>
+            <p>dit is mijn allereerste HTML site met CSS, ik heb hier echt heel lang op gewerkt, maar achteraf gezien heb ik hier niet echt goed op het usability gedeelte gekeken.</p>
+            <br>
+            <button class="icon-website" onclick="openFile('http://numer.magix.net');">Numer.magix.net</button>
+        </article>
+        <article class="image" id="product7">
+            <img src="https://img.itch.zone/aW1hZ2UvMTUxNjQwLzY5NDM0My5wbmc=/347x500/8u5vpH.png" alt="screenshot">
+            <h1>Assasins Hiding</h1>
+            <p>Dit is mijn eerste multiplayer game, het werkt niet helemaal perfect maar het is speelbaar, ook dit heb ik weer geschreven </p>
+            <br>
+            <button class="icon-website" onclick="openFile('https://numer.itch.io/assassins-hiding');">Itch.io</button>
+        </article>
+        <article class="image" id="product8">
+            <img src="http://fortygame.com/wp-content/gallery/screenshots/WIP_4-28-16.png" alt="screenshot">
+            <h1>Forty</h1>
+            <p>Dit heb ik niet zelf gemaakt maar ik heb wel veel geholpen met de maker, ik keek namelijk veel naar zijn twitch stream en zo zijn we in contact gekomen met elkaar. Ook deze game is geschreven in C#.</p>
+            <br>
+            <button class="icon-website" onclick="openFile('https://fortygame.com');">fortygame.com</button>
         </article>
     </section>
 </body>

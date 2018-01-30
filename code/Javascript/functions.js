@@ -65,6 +65,14 @@ var grades = [{
  * @param {string} vak
  */
 function showGrade(element, vak) {
-    element.parentElement.nextElementSibling.firstElementChild.innerHTML = grades.find(function(element) { return element.Key == vak }).Grade.toFixed(1);
+    element.parentElement.nextElementSibling.firstElementChild.innerHTML = FindVak(vak).toFixed(1);
     element.parentElement.nextElementSibling.firstElementChild.style.display = "block";
+}
+
+function FindVak(vak) {
+    for (var i = 0; i < grades.length; i++) {
+        if (grades[i].Key == vak) {
+            return grades[i].Grade;
+        }
+    }
 }

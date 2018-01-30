@@ -1,4 +1,6 @@
 :root {
+    /* hier maak ik variables aan voor de kleuren zodat ik ze eventueel later kan veranderen
+    ik gebruik express geen rgb zodat ik ook nog de alpha channel kan veranderen, ik gebruik deze waardes nu met `rgb(var(--Primary))` of `rgb(var(--Primary),0.5)` */
     --Primary: 233, 43, 0;
     --Accent: 0, 190, 233;
     --DarkAccent: 0, 150, 193;
@@ -8,15 +10,24 @@
     --TextColorCode: 0, 255, 255;
 }
 
+
+/* importeer de font fira code */
+
 @font-face {
     font-family: "Fira Code";
     src: url("FiraCode-Regular.ttf");
 }
 
+
+/* een simpele laadanimatie om het net wat mooier te maken */
+
 article,
 .header h2 {
     animation: startup 0.5s 1 ease-in-out;
 }
+
+
+/* de animatie */
 
 @keyframes startup {
     0% {
@@ -27,6 +38,9 @@ article,
 
 
 /* #region Standard styles*/
+
+
+/* een kleine hack om de universele selector en algemene buur te gebruiken */
 
 *~body {
     color: rgb(var(--TextColor));
@@ -39,9 +53,15 @@ article,
     position: relative;
 }
 
+
+/* dit zorgt ervoor dat de footer onderaan staat */
+
 html {
     height: 100%;
 }
+
+
+/* elke h1 en h2 moet dit lettertype hebben */
 
 h1,
 h2 {
@@ -58,6 +78,9 @@ h2 {
     margin-bottom: 0;
 }
 
+
+/* de standaard stijl van buttons, .button is voor links die als buttons moeten zien */
+
 button,
 .button {
     text-decoration: none;
@@ -73,9 +96,15 @@ button,
     background-color: rgb(var(--DarkAccent));
 }
 
+
+/* hier gebruik ::first-letter omdat ik het moest gebruik */
+
 h1::first-letter {
     font-size: 115%;
 }
+
+
+/* een beetje veel, maar dit zorgt er voor dat alle buttons na de eerste een andere kleur hebben */
 
 button+button,
 .button+.button,
@@ -84,11 +113,17 @@ button+.button {
     background-color: rgb(var(--Accent));
 }
 
+
+/* een simpele hover van buttons */
+
 button:hover,
 .button:hover {
     filter: grayscale(0.5);
     box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2);
 }
+
+
+/* dit zorgt er voor dat buttons hun volledige breedte pakken */
 
 .full-width {
     display: block;
@@ -101,11 +136,17 @@ ul {
     margin: 0;
 }
 
+
+/* dit zorgt er voor dat je plaatjes en buttons niet kunt verslepen */
+
 img,
 button {
     user-select: none;
     -webkit-user-drag: none;
 }
+
+
+/* de footer style */
 
 footer {
     position: absolute;
@@ -124,6 +165,9 @@ footer p {
     margin: 0;
 }
 
+
+/* dit maakt code blokken op, het wordt nou niet gebruikt, maar later wel. */
+
 code {
     display: inline-block;
     background-color: rgb(var(--Code));
@@ -137,6 +181,9 @@ code {
     text-align: left;
 }
 
+
+/* dit zorgt er voor dat tables de hele breedte in nemen van artikels */
+
 table {
     display: inline-table;
     margin: 0;
@@ -144,18 +191,21 @@ table {
     border-collapse: collapse;
 }
 
-td {
-    text-align: left;
-}
+
+/* dit maakt empty cells op */
 
 td:empty {
     background-color: white;
 }
 
 td {
+    text-align: left;
     border-top: 1px dashed lightgray;
     border-bottom: 1px dashed lightgray;
 }
+
+
+/* elke button in een td moet de volledige breedte nemen */
 
 td button {
     width: 95%;
@@ -164,6 +214,16 @@ td button {
 .grade {
     text-align: center;
 }
+
+
+/* dit word alleen op de contactpagina gebruikt om witte afbeeldingen zwart te maken */
+
+.invert {
+    filter: invert();
+}
+
+
+/* dit maakt de selectie op */
 
 ::selection {
     background-color: rgb(var(--DarkAccent));
@@ -174,6 +234,9 @@ td button {
 
 
 /* #region Icons*/
+
+
+/* hier zijn verschillende iconen die je kunt gebruiken op knoppen ik had hier font-awesome kunnen gebruiken maar ik wou het zelf ook even proberen  */
 
 .icon-download {
     background-image: url(Images/download.png);
@@ -215,11 +278,30 @@ td button {
     background-repeat: no-repeat;
 }
 
+.icon-contact {
+    background-image: url(Images/contact.png);
+    padding-left: 65px;
+    background-position: .75em center;
+    background-size: 1.5em;
+    background-repeat: no-repeat;
+}
+
+.icon-phone {
+    background-image: url(Images/phone.png);
+    padding-left: 65px;
+    background-position: .75em center;
+    background-size: 1.5em;
+    background-repeat: no-repeat;
+}
+
 
 /* #endregion */
 
 
 /* #region navbar*/
+
+
+/* de navigatiebalk */
 
 nav {
     z-index: 999;
@@ -235,6 +317,9 @@ nav {
     box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+
+/* elk item in de navbar */
+
 nav a {
     position: relative;
     overflow: visible;
@@ -246,15 +331,24 @@ nav a {
     transition: margin-bottom 0.1s, text-shadow 0.5s;
 }
 
+
+/* on hover event voor items */
+
 nav a:hover {
     color: white;
 }
+
+
+/* dit is de knop voor mobiel, die hoeft niet zichtbaar te zijn in desktop mode */
 
 nav #menu {
     visibility: hidden;
     height: 5vmax;
     float: left;
 }
+
+
+/* de item met 'neem contact op!' */
 
 .contact {
     text-decoration: none;
@@ -263,6 +357,9 @@ nav #menu {
 
 
 /* #region submenu's*/
+
+
+/* dit maakt de submenu op die is er alleen op producten op dit moment, maar er komt meer als goed is.*/
 
 a .submenu {
     transform-origin: top;
@@ -282,10 +379,16 @@ a .submenu {
     border-bottom-right-radius: 5px;
 }
 
+
+/* als je hovert over een item dan komt de submenu naar beneden */
+
 a:hover .submenu {
     transform: scaleY(1);
     opacity: 1;
 }
+
+
+/* de items voor de submenu */
 
 .submenu li {
     padding: 5px 10px;
@@ -304,6 +407,9 @@ a:hover .submenu {
 
 
 /* #region headers*/
+
+
+/* dit maakt de header op, het eerste vak */
 
 .header {
     display: flex;
@@ -344,6 +450,9 @@ a:hover .submenu {
 
 /* #region Articles*/
 
+
+/* een div die er voor zorgt dat alle artikels goed komen te staan, ik gebruik hier flexbox voor*/
+
 .articles {
     display: flex;
     justify-content: center;
@@ -351,8 +460,10 @@ a:hover .submenu {
     flex-wrap: wrap;
 }
 
+
+/* een artikel, het grijze blok */
+
 article {
-    align-self: flex-start;
     flex: 0 35vw;
     background-color: rgb(var(--Window));
     margin: 15px 10px;
@@ -363,30 +474,48 @@ article {
     z-index: 1;
 }
 
+
+/* dit zorgt er voor iframes(google maps) volledige breedte pakken */
+
 article iframe {
     width: 100%;
     border-radius: 10px;
 }
+
+
+/* eerst justifying daarna naar het midden uitlijnen */
 
 article p {
     text-align: justify;
     text-align-last: center;
 }
 
+
+/* de eerste line wordt wat groter */
+
 article p::first-line {
     font-size: 105%;
     word-spacing: 101%;
 }
+
+
+/* de eerste h1 moet een andere kleur krijgen */
 
 article h1 {
     margin: 0;
     color: rgb(var(--Accent));
 }
 
+
+/* dit zorgt er voor dat mijn foto rond word */
+
 article.profile img {
     border-radius: 100%;
     border: 1px solid rgba(var(--Accent), 0.4);
 }
+
+
+/* dit zorgt er voor dat het eerste img de hele width opvult */
 
 article.image img {
     position: relative;
@@ -398,9 +527,22 @@ article.image img {
     border-top-left-radius: 10px;
 }
 
+
+/* dit zorgt er voor dat logo's er mooi uitzien */
+
 article.logo img {
     width: 50%;
     border-bottom: 1px solid lightgray;
+}
+
+
+/* dit is voor de homepage omdat blijkbaar de layout van de homepage er anders uit moet zien */
+
+article.homepage {
+    margin-top: 10vh;
+    flex: 1 100%;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 
@@ -408,6 +550,9 @@ article.logo img {
 
 
 /* #region Grades */
+
+
+/* deze region zorgt er voor dat de cijfers op de pagina opleidingen mooi uit zien */
 
 .grade {
     width: 60px;
@@ -432,7 +577,10 @@ article.logo img {
 
 /* #region Mobile*/
 
-@media screen and (max-device-width: 780px) and (orientation: portrait) {
+
+/* de media query die er voor zorgt dat mobiele weergave werkt in portrait modus */
+
+@media screen and (max-device-width: 780px) {
     nav {
         height: 5vmax;
         align-items: center;
@@ -440,11 +588,13 @@ article.logo img {
         box-shadow: initial;
         background-color: rgb(var(--Primary));
     }
+    /* dit zorgt er voor dat je het menu in en uit kan klappen */
     nav div {
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
+    /* als javascript een de class show toevoegt moet de menu zichtbaar worden */
     nav div.show {
         visibility: visible;
         opacity: 1;
@@ -462,11 +612,13 @@ article.logo img {
         display: block;
         z-index: 1;
     }
+    /* dit verdonkerd de achtergrond en als je daar op klikt gaat het menu weer weg */
     nav>div.show>.backdrop {
         visibility: visible;
         display: inline;
         opacity: 1;
     }
+    /* als het menu niet meer zichtbaar hoort te zijn verberg de backdrop */
     nav>div>.backdrop {
         display: none;
         background-color: rgba(0, 0, 0, .2);
@@ -479,6 +631,7 @@ article.logo img {
         height: 100vh;
         z-index: -1;
     }
+    /* een menuitem */
     nav a {
         margin: 0;
         padding: 25px 5px;
@@ -487,17 +640,21 @@ article.logo img {
         color: rgb(var(--Accent));
         transition: max-height 0.2s;
     }
+    /* als een menuitem een .submenu bevat zet de max-height naar een extreme aantal zodat hij uitklapt */
     a.show {
         max-height: 9999px;
     }
+    /* een quickfix, als je op een element klikt wordt hij ook gehovert in mobiele modus, dit zorgt er voor dat je em gewoon weer kunt inklappen */
     a:hover .submenu {
         transform: scaleY(0);
         opacity: 0;
     }
+    /* als de submenu te voorschijn moet komen klap hem uit */
     a.show .submenu {
         transform: scaleY(1);
         opacity: 1;
     }
+    /* de submenu voor mobiele weergave */
     a .submenu {
         transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         height: fit-content;
@@ -517,6 +674,7 @@ article.logo img {
         padding: 25px 5px;
         color: rgb(var(--Accent));
     }
+    /* dit zorgt ervoor dat de elementen van kleur afwisselen */
     .submenu li:nth-child(odd) {
         background-color: rgba(0, 0, 0, 0.065);
     }
@@ -529,16 +687,20 @@ article.logo img {
     nav a:nth-child(even) {
         background-color: rgb(230, 230, 230);
     }
+    /* dit veranderd de kleur terug naar normaal */
     #contact {
         color: rgb(var(--DarkAccent));
     }
+    /* de menu knop moet zichtbaar worden in mobiele weergave */
     #menu {
         visibility: visible !important;
         height: 5vmax;
     }
+    /* de body mag niet wegvallen achter de navbar */
     body {
         padding-top: 5vmax;
     }
+    /* de header mag nu wat kleiner worden */
     .header {
         height: 25vmax;
         box-shadow: initial;
@@ -550,6 +712,7 @@ article.logo img {
     .header h2 {
         top: 14.2vmax;
     }
+    /* artikels moeten nu de volledige breedte in nemen */
     article {
         flex: 0 95vw;
         max-width: 85vw;
@@ -559,120 +722,6 @@ article.logo img {
     }
     table td {
         width: 30%;
-    }
-}
-
-@media screen and (max-device-width: 780px) and (orientation: landscape) {
-    nav {
-        height: 5vmax;
-        align-items: center;
-        justify-content: flex-start;
-        box-shadow: initial;
-        background-color: rgb(var(--Primary));
-    }
-    nav div {
-        opacity: 0;
-        transition: opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-    nav div.show {
-        opacity: 1;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        height: auto;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        width: 50vw;
-        background-color: rgba(var(--Window), 1);
-        box-shadow: 5px 0 15px 0 rgba(0, 0, 0, 0);
-        display: block;
-        z-index: 1;
-    }
-    nav>div.show>.backdrop {
-        display: inline;
-        opacity: 1;
-    }
-    nav>div>.backdrop {
-        display: none;
-        background-color: rgba(0, 0, 0, .2);
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: -1;
-    }
-    nav a {
-        margin: 0;
-        padding: 25px 5px;
-        max-height: 25px;
-        display: block;
-        color: rgb(var(--Accent));
-        transition: max-height 0.2s;
-    }
-    a.show {
-        max-height: 9999px;
-    }
-    a:hover .submenu {
-        transform: scaleY(0);
-        opacity: 0;
-    }
-    a.show .submenu {
-        transform: scaleY(1);
-        opacity: 1;
-    }
-    a .submenu {
-        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-        height: fit-content;
-        background: none;
-        position: static;
-        opacity: 0;
-        transform: scaleY(0);
-        width: calc(100% - 25px);
-        margin: 25px;
-        padding-left: 25px;
-        margin-left: -5px;
-        border-radius: 0;
-        border-bottom-left-radius: 5px;
-    }
-    .submenu li {
-        border-left: 5px solid rgba(var(--DarkAccent), 0.5);
-        padding: 25px 5px;
-        color: rgb(var(--Accent));
-    }
-    .submenu li:nth-child(odd) {
-        background-color: rgba(0, 0, 0, 0.065);
-    }
-    .submenu li:nth-child(even) {
-        background-color: rgba(0, 0, 0, 0.025);
-    }
-    nav a:nth-child(odd) {
-        background-color: rgb(240, 240, 240);
-    }
-    nav a:nth-child(even) {
-        background-color: rgb(230, 230, 230);
-    }
-    #contact {
-        color: rgb(var(--DarkAccent));
-    }
-    #menu {
-        visibility: visible !important;
-        height: 5vmax;
-    }
-    body {
-        padding-top: 5vmax;
-    }
-    .header {
-        height: 25vmax;
-        box-shadow: initial;
-        margin-bottom: 5px;
-    }
-    article {
-        flex: 1 100vw;
-        max-width: 100%;
     }
 }
 

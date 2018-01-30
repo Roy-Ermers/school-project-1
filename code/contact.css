@@ -1,0 +1,114 @@
+/* hier verklein ik de navbar omdat deze op dit moment niet heel belangrijk is*/
+
+nav {
+    height: 3.5vh;
+}
+
+
+/*hier draai ik de ::first-letter van de h1 af*/
+
+h1::first-letter {
+    font-size: 100%;
+}
+
+body {
+    text-align: center;
+}
+
+
+/*dit zorgt er voor dat er geen lelijke outline om de inputs staan.*/
+
+input,
+select {
+    outline: none;
+}
+
+td {
+    padding: 10px 5px;
+}
+
+
+/* selecteert alle inputs behalve submit en reset buttons */
+
+input:not([type=submit]):not([type=reset]),
+select {
+    color: rgb(var(--textColor));
+    border: none;
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px 0 rgba(128, 128, 128, 0.5);
+    transition: box-shadow 0.5s ease-in-out;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+/* veranderd de kleur van de shadow als je aan het typen bent */
+
+input:not([type=submit]):not([type=reset]):focus {
+    box-shadow: inset 0 0 5px 0 rgb(var(--DarkAccent));
+}
+
+
+/* als een required veld goed is dan wordt het sterretje volledig gevuld. */
+
+:required:valid,
+:required:valid {
+    background: url("Images/star-filled.png");
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 95% center;
+}
+
+
+/* als er nog niets is ingevuld laat een leeg sterretje zien */
+
+:required {
+    background: url("Images/star.png");
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 95% center;
+}
+
+
+/* als je aan het typen bent laat een half sterretje zien */
+
+:required:focus,
+:required:focus {
+    background: url("Images/star-half.png");
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 95% center;
+}
+
+
+/* als je aan het typen bent en de waarde is invalid verander de shadow naar rood */
+
+input:focus:invalid {
+    box-shadow: inset 0 0 5px 0 darkred;
+}
+
+
+/* opmaak voor de buttons onder de form */
+
+input[type=submit],
+input[type=reset] {
+    width: 100%;
+    text-decoration: none;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 10px 50px;
+    margin: 5px;
+    color: white;
+    transition: filter 0.3s, box-shadow 0.3s;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgb(var(--DarkAccent));
+}
+
+
+/* verander de kleur van de reset knop */
+
+input[type=reset] {
+    background-color: rgb(var(--Accent));
+}
